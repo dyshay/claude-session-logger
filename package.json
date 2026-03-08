@@ -10,7 +10,8 @@
     "install.js",
     "uninstall.js",
     "scripts/",
-    "hooks/"
+    "hooks/",
+    "LICENSE"
   ],
   "keywords": [
     "claude",

@@ -1,7 +1,7 @@
 {
   "name": "claude-session-logger",
   "version": "1.0.0",
-  "description": "Automatically logs a full git diff of everything that changed during a Claude Code session",
+  "description": "Automatically logs a full git diff of everything that changed during a Claude Code session — track all code changes with zero config",
   "bin": {
     "claude-session-logger": "./cli.js"
   },
@@ -15,17 +15,31 @@
   "keywords": [
     "claude",
     "claude-code",
+    "anthropic",
     "hooks",
     "session",
     "git-diff",
     "logger",
-    "devtools"
+    "devtools",
+    "developer-tools",
+    "productivity",
+    "cli",
+    "git",
+    "diff",
+    "changelog",
+    "session-log",
+    "ai-coding",
+    "code-tracking"
   ],
-  "author": "dyl_c",
+  "homepage": "https://github.com/dyshay/claude-session-logger#readme",
+  "bugs": {
+    "url": "https://github.com/dyshay/claude-session-logger/issues"
+  },
+  "author": "dyshay",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dyl_c/claude-session-logger.git"
+    "url": "git+https://github.com/dyshay/claude-session-logger.git"
   },
   "engines": {
     "node": ">=18"

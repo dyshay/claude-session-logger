@@ -1,0 +1,26 @@
+{
+  "_comment": "Reference only. Use install.js to register these hooks into Claude Code settings.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"<plugin-root>/scripts/session-start.js\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"<plugin-root>/scripts/session-end.js\""
+          }
+        ]
+      }
+    ]
+  }
+}

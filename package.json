@@ -1,0 +1,33 @@
+{
+  "name": "claude-session-logger",
+  "version": "1.0.0",
+  "description": "Automatically logs a full git diff of everything that changed during a Claude Code session",
+  "bin": {
+    "claude-session-logger": "./cli.js"
+  },
+  "files": [
+    "cli.js",
+    "install.js",
+    "uninstall.js",
+    "scripts/",
+    "hooks/"
+  ],
+  "keywords": [
+    "claude",
+    "claude-code",
+    "hooks",
+    "session",
+    "git-diff",
+    "logger",
+    "devtools"
+  ],
+  "author": "dyl_c",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dyl_c/claude-session-logger.git"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

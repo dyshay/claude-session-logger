@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18, 20, 22]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Verify scripts parse without errors
+        run: |
+          node -c scripts/session-start.js
+          node -c scripts/session-end.js
+          node -c install.js
+          node -c uninstall.js
+          node -c cli.js
+
+      - name: Test install in a git repo
+        run: |
+          mkdir test-project
+          cd test-project
+          git init
+          git config user.email "ci@test.com"
+          git config user.name "CI"
+          echo "hello" > file.txt
+          git add . && git commit -m "init"
+          node ../install.js
+          node ../uninstall.js
